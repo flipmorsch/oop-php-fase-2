@@ -4,19 +4,10 @@ define('CLASS_DIR', 'src/');
 set_include_path(get_include_path().PATH_SEPARATOR.CLASS_DIR);
 spl_autoload_register();
 
-$x = new Flip\Listing\Clients\ClientFisico;
+define('ROOT', dirname(__DIR__) . DIRECTORY_SEPARATOR);
+define('APP', __DIR__ . 'app' . DIRECTORY_SEPARATOR);
 
-$db = new DB\TxtDB([
-    'dir'   =>  'db/',
-    'extension' =>  'txtdb',
-    'encrypt'   =>  'false',
-]);
+$controller = isset($_GET['controller']) ? $_GET['controller'] : "Home";
+$action = isset($_GET['action']) ? $_GET['action'] : "index";
 
-if (isset($_GET['page']) and file_exists('views/'.$_GET['page'].'.php'))
-{
-    require_once ('views/'.$_GET['page'].'.php');
-}
-else
-{
-    require_once ('views/home.php');
-}
+$router = new Flip\Listing\Router($controller, $action);
