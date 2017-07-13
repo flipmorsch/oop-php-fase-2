@@ -2,9 +2,11 @@
 
 namespace Flip\Listing\Clients;
 
-use App\Classes\Clients\Parent\ClientAbstract;
+use App\Classes\Abstracts\ClientAbstract;
 
 class ClientJuridico extends ClientAbstract
 {
-    
+
+    public $connection;
+
 }

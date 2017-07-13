@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Classes\Clients\Parent;
+namespace App\Classes\Abstracts;
 
 abstract class ClientAbstract
 {
@@ -28,6 +28,7 @@ abstract class ClientAbstract
     public function setId($id)
     {
         $this->id = $id;
+        return $this;
     }
 
     /**
@@ -44,6 +45,7 @@ abstract class ClientAbstract
     public function setName($name)
     {
         $this->name = $name;
+        return $this;
     }
 
     /**
@@ -60,6 +62,7 @@ abstract class ClientAbstract
     public function setAge($age)
     {
         $this->age = $age;
+        return $this;
     }
 
     /**
@@ -76,6 +79,7 @@ abstract class ClientAbstract
     public function setRanking($ranking)
     {
         $this->ranking = $ranking;
+        return $this;
     }
 
     /**
@@ -92,6 +96,7 @@ abstract class ClientAbstract
     public function setAddress($address)
     {
         $this->address = $address;
+        return $this;
     }
 
     /**
@@ -108,6 +113,7 @@ abstract class ClientAbstract
     public function setBillingAddress($billingAddress)
     {
         $this->billingAddress = $billingAddress;
+        return $this;
     }
 
     /**
@@ -124,6 +130,7 @@ abstract class ClientAbstract
     public function setDocument($document)
     {
         $this->document = $document;
+        return $this;
     }
 
     /**
@@ -140,6 +147,7 @@ abstract class ClientAbstract
     public function setType($type)
     {
         $this->type = $type;
+        return $this;
     }
 
 
