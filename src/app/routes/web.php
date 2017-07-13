@@ -1,9 +1,14 @@
 <?php
 
+use App\Controllers\HomeController;
+use App\Controllers\ClientController;
+
 $router->get('/', function(){
-    echo 'Hello World';
+    $controller = new HomeController();
+    $controller->index();
 });
 
-$router->get('/home/(\w+)', function ($id){
-    echo 'Hello ' . htmlentities($id);
+$router->get('/client/add', function (){
+    $controller = new ClientController();
+    $controller->addForm();
 });

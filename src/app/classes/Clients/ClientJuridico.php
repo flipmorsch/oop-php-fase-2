@@ -2,11 +2,9 @@
 
 namespace Flip\Listing\Clients;
 
-use Flip\Listing\Clients\Utils\ClientAbstract;
+use App\Classes\Clients\Parent\ClientAbstract;
 
 class ClientJuridico extends ClientAbstract
 {
-
-
-
+    
 }

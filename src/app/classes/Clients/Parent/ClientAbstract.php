@@ -1,6 +1,6 @@
 <?php
 
-namespace Flip\Listing\Clients\Utils;
+namespace App\Classes\Clients\Parent;
 
 abstract class ClientAbstract
 {
